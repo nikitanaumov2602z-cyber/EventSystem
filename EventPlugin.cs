@@ -9,7 +9,7 @@ namespace EventSystem
         public static EventPlugin Instance;
         public override string Name => "DeltaProject";
         public override string Author => "Delta Project";
-        public override Version Version => new Version(1, 0, 1);
+        public override Version Version => new Version(1, 0, 2);
         public override Version RequiredExiledVersion => new Version(8, 0, 0);
 
         private EventHandler eventHandler;
@@ -23,6 +23,7 @@ namespace EventSystem
 
         public override void OnDisabled()
         {
+            eventHandler?.Unsubscribe();
             eventHandler = null;
             Instance = null;
             base.OnDisabled();
