@@ -276,12 +276,12 @@ namespace EventSystem
         private void SendHelp(Player player)
         {
             player.SendConsoleMessage(
-                $"{plugin.Config.ProjectName} — Команды ивента:\n" +
-                "ev start [название] – начать ивент\n" +
-                "ev end – завершить ивент\n" +
-                "ev give <игрок> – передать права ведущего\n" +
-                "ev helper <игрок> – добавить помощника\n" +
-                "ev removehelper <игрок> – убрать помощника\n" +
+                $"{plugin.Config.ProjectName} — Команды ивента:" +
+                "ev start [название] – начать ивент" +
+                "ev end – завершить ивент"  +
+                "ev give <игрок> – передать права проводящего " +
+                "ev helper <игрок> – добавить помощника" +
+                "ev removehelper <игрок> – убрать помощника" +
                 "ev list – список ведущего и помощников",
                 "white"
             );
@@ -322,7 +322,7 @@ namespace EventSystem
 👤 Проводящий: {host?.Nickname ?? "—"}
 🛡️ Helper: {helpersStr}
 
-⏱️ Ивент: {elapsed:hh\\:mm\\:ss}
+⏱️ Врямя Ивента: {elapsed:hh\\:mm\\:ss}
 ⌛ Раунд: {roundTime:hh\\:mm\\:ss}
 
 ╠════════════════════════════════════════════╣
